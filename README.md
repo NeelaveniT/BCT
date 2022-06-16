@@ -50,6 +50,8 @@ Things you may want to cover:
 	=> Change directory to BCT
 
 		=> cd BCT
+		
+		=> cd usermanagement
 
 	=> Install the gems  
 	
