@@ -19,6 +19,7 @@ Things you may want to cover:
         * bundler
 
 * Configuration
+* 
 	=> sudo -u postgres psql
 
         => create user <current_user_name> with encrypted password 'password';
@@ -26,12 +27,15 @@ Things you may want to cover:
         => alter role <current_user_name> superuser createrole createdb;
 
 * Database creation
+* 
 	=> rails db:create
 
 * Database initialization
+* 
 	=> rails db:migrate
 
 * How to run the application
+
 	=> rails s -p 3000
 	
 * Services (job queues, cache servers, search engines, etc.)
