@@ -1,0 +1,64 @@
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color:  #2b71f4;
+  border: 0 none;
+  width: 50px;
+  height: 25px;
+  color: white;
+  border-radius: 2px;
+}
+
+
+</style>
+    <head>
+    <h1> Add User </h1>
+    <%=form_for :users , url: { action: "add" }, method: 'post', remote: true do |f| %>
+      <div>
+          <label for="name"> UserName </label>
+              <input type="text" id="name" name="name" pattern="[a-zA-z]+" title="Only Alphabets" class="form-control" required = "true"/>
+      </div>
+      <div>
+          <label for="email"> Email </label>
+              <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalid mail id" class="form-control" required = "true"/>
+      </div>
+      <div>
+        <label for="gender"> Gender </label>
+        <select name="gender" id="gender" required>
+          <option value="" selected disabled hidden>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div>
+        <label for="status"> Status </label>
+        <div>
+            <input type="radio" id="myRadio" name="status" value="active" required> <label for="active">Active</label>
+            <input type="radio" id="myRadio" name="status" style=margin-left:200px; value="inactive" required> <label for="inactive">Inactive</label>
+        </div>
+      </div>
+      <br>
+      <div>
+        <input type="submit" class="button" value="Submit">
+      </div>
+    <%end%>
+
+  </head>
+</html>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myRadio").required;
+      document.getElementById("demo").innerHTML = x;
+    }
+</script>

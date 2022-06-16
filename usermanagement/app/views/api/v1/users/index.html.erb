@@ -1,0 +1,36 @@
+<html>
+<style>
+input[type=submit] {
+  background-color:  #2b71f4;
+  border: 0 none;
+  width: 75px;
+  height: 25px;
+  color: white;
+  border-radius: 2px;
+}
+
+</style>
+  <head>
+      <h1><center> User Management </center></h1>
+      <p> This application for user management with add, update, delete and view the user </p>
+      <p> Using api request, can do the same operations also </p>
+      <div><center>
+        <input type="submit" value="Add User" onclick="location.href='http://127.0.0.1:3000/api/v1/users/add'">
+        <input type="submit" value="Update User" onclick="myFunction()">
+        <input type="submit" value="Delete User" onclick="mydelfun()">
+        <input type="submit" value="View Users" onclick="location.href='http://127.0.0.1:3000/api/v1/users/view'">
+        </center> </div>
+
+  </head>
+</html>
+  <script>
+  function myFunction(){
+    var ids = window.prompt("Enter id of the user: ");
+    window.location.href="http://127.0.0.1:3000/api/v1/users/update?id="+ ids;
+  }
+
+  function mydelfun(){
+    var del_id = window.prompt("Enter id of the user to delete:");
+    window.location.href="http://127.0.0.1:3000/api/v1/users/delete?id="+ del_id;
+  }
+  </script>
