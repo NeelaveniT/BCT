@@ -25,7 +25,7 @@ Things you may want to cover:
         => alter role <current_user_name> superuser createrole createdb;
 
 * Database creation
- 
+
 	=> rails db:create
 
 * Database initialization
